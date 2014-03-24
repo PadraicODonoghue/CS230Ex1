@@ -1,0 +1,16 @@
+
+div.right.p, .player{
+/*	float: right;*/
+	margin-left: 360px;
+	margin-right:20px;
+}
+
+img {
+	margin-left:20px;
+	float: left;
+	vertical-align: middle;
+}
+
+blockquote {
+	font-style: italic;
+}

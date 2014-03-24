@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Padraic O'Donoghue CS230 Project</title>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+
+<body>
+    <!-- Top Section: Title -->
+    <div class="header">
+        <a href="indexW05.html">
+            <h1>Padraic O'Donoghue</h1>
+        </a>
+    </div>
+
+    <!-- Sidebar: Navigation -->
+    <div class="left">
+        <nav>
+            <a href="http://www.cs.nuim.ie">NUIM CS Dept</a>
+            </br>
+            <a href="aboutW05.html">About Me</a>
+            </br>
+            <a href="cs230W05.html">CS230 Progress</a>
+            </br>
+            <a href="modulesW05.html">Modules</a>
+            </br>
+            <!-- <a href="sailingW05.html">Sailing</a>
+            </br> -->
+            <a href="societyW05.html">Society Work</a>
+            </br>
+            <a href="contactW05.html">Contact Me</a>
+
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="right">
+        <div id="info">
+            <button onclick="getLocation()">Click to get directions to the Atlantic Sailing Club</button>
+        </div>
+        <br>
+
+        <section class="image-gallery">
+            <table>
+                <tr>
+                    <td>
+                        <figure tabindex="1">
+                            <img src="img/0.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="2">
+                            <img src="img/1.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="3">
+                            <img src="img/2.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <figure tabindex="4">
+                            <img src="img/3.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="5">
+                            <img src="img/4.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="6">
+                            <img src="img/5.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                </tr>
+                <tr>
+                    <td>
+                        <figure tabindex="7">
+                            <img src="img/6.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="8">
+                            <img src="img/7.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure tabindex="9">
+                            <img src="img/8.jpg" alt="Picture of sailing boats" title="Click to view"></img>
+                        </figure>
+                    </td>
+                </tr>
+                </td>
+            </table>
+        </section>
+    </div>
+
+    <!-- End Section: Copyright -->
+    <div class="footer">
+        <p>Copyright © Padraic O'Donoghue 2014</p>
+    </div>
+
+</body>
+
+
+<script>
+  var info = document.getElementById("info");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude
+    info.innerHTML="<iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=FYBjLgMdkkeb_w%3BFe6UGAMdgLFj_yHIHNeElWnEOyldH7Tw5fJPSDHIHNeElWnEOw&amp;q="+ lat +",+"+ lon +"+to+Mannix+Point&amp;aq=&amp;sll="+ lat +",-6.600814&amp;sspn=0.007963,0.021136&amp;t=h&amp;g="+ lat +",+"+ lon +"&amp;ie=UTF8&amp;saddr="+ lat +",+"+ lon +"&amp;daddr=Mannix+Point&amp;ll=52.655726,-8.406877&amp;spn=1.431909,3.663237&amp;output=embed\"></iframe>";
+}
+
+</script>
+
+
+</html>
